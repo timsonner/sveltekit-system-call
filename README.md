@@ -1,22 +1,21 @@
-# create-svelte
+# SvelteKitSystemCall
+Skeleton project with a route that makes a system call using the spawn() function from the child_process module. The route is accessed by hitting the /api.json endpoint. For example: http://localhost:3000/api.json if you have deployed your web server locally. The endpoint will present the terminal output of a directory listing of the project directory. 
+<p>tl;dr => the server runs `ls -al` and your browser displays the output.</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+> Note: Try some other commands, but note that arguments are treated as seperate elements and placed in an array, so `ping -c 10 8.8.8.8` will turn into `ping`, [`-c`, `10`, `8.8.8.8`] when passed as parameters to spawn(). 
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Before running the server
+
+Here is a preemptive purple jelly bean. Congrats! 
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+# before running the server
+npm install
 ```
+> Note: If you're using GitPod, this is all turn key, including VSCode extensions, and HMR.
 
-> Note: the `@next` is temporary
-
-## Developing
+## Running a development server
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -27,7 +26,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+## Building a production server
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
